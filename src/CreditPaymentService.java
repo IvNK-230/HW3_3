@@ -1,7 +1,7 @@
 public class CreditPaymentService {
-    public int calculate(int a, int b, double c) {
+    public int calculate(int month, int sum, double percent) {
         double payment;
-        payment = b * (c * (Math.pow((1 + c), a))) / ((Math.pow((1 + c), a)) - 1);
+        payment = sum * (percent * (Math.pow((1 + percent), month))) / ((Math.pow((1 + percent), month)) - 1);
         return (int) payment;
     }
 }
